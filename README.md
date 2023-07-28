@@ -9,8 +9,7 @@ Before using Llama.cpp, we need to convert the models to GGML format. Additional
 To prepare the models, follow these steps:
 
 1. **Download LLama 2 models**: Obtain the required LLama 2 models.
-
-2. Convert to FP32
+2. **Convert to FP32**
 2. **Quantization**: Perform 4-bit quantization on the downloaded models to reduce memory footprint and improve efficiency.
 
 
