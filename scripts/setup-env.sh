@@ -25,7 +25,7 @@ fi
 pyenv activate $ENV_NAME
 
 pip install --upgrade pip
-pip install pytest cmake scikit-build setuptools fastapi uvicorn sse-starlette pydantic-settings torch
+pip install -r requirements.txt
 
 # Install this version compatible with CUDA 11.2
 python -m pip install llama-cpp-python --prefer-binary --extra-index-url=https://jllllll.github.io/llama-cpp-python-cuBLAS-wheels/AVX2/cu122

@@ -11,8 +11,7 @@ To prepare the models, follow these steps:
 
 1. **Download LLama 2 models**: Obtain the required LLama 2 models by going [here](https://ai.meta.com/resources/models-and-libraries/llama-downloads/). 
 2. Once you get the email, copy the link and run the following command: `make download_models`. Follow the promps and wait for the selected models to download. The default directory is `./models`.
-3. **Convert to GGML FP16 format**
-4. **Quantization**: Perform 4-bit quantization on the downloaded models to reduce memory footprint and improve efficiency.
+3. **Convert to GGML FP16 format and 4-bit quantization**: This is to reduce memory footprint, lower model size, and improve inference times. This can be done by running the following script: `make process_model MODEL_NAME=models/llama-2-13b-chat`
 
 
 ## FastAPI Server
