@@ -1,6 +1,7 @@
-# LLama 2 Tools and Web Server
+# LLama 2 Tools and FastAPI
 
 A collection of scripts and a FastAPI server designed for Llama 2, utilizing both llama.cpp and Python bindings.
+
 
 ## Preparing Models
 
@@ -8,12 +9,13 @@ Before using Llama.cpp, we need to convert the models to GGML format. Additional
 
 To prepare the models, follow these steps:
 
-1. **Download LLama 2 models**: Obtain the required LLama 2 models.
-2. **Convert to FP32**
-2. **Quantization**: Perform 4-bit quantization on the downloaded models to reduce memory footprint and improve efficiency.
+1. **Download LLama 2 models**: Obtain the required LLama 2 models by going [here](https://ai.meta.com/resources/models-and-libraries/llama-downloads/). 
+2. Once you get the email, copy the link and run the following command: `make download_models`. Follow the promps and wait for the selected models to download. The default directory is `./models`.
+3. **Convert to GGML FP16 format**
+4. **Quantization**: Perform 4-bit quantization on the downloaded models to reduce memory footprint and improve efficiency.
 
 
-## Starting the FastAPI Server
+## FastAPI Server
 
 To begin using the FastAPI server for LLama 2, follow these steps:
 
