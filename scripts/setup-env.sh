@@ -5,13 +5,11 @@ ENV_NAME="llm"
 MODELS_PATH="./models"
 REPOS_PATH="./repos"
 
-### Check if pyenv is installed
 if ! command -v pyenv &> /dev/null; then
     echo "pyenv is not installed. Please install pyenv first."
     exit 1
 fi
 
-### Create directories
 mkdir -p $MODELS_PATH
 mkdir -p $REPOS_PATH
 
@@ -56,8 +54,7 @@ python -m pip install llama-cpp-python --prefer-binary --extra-index-url=https:/
 # fi
 
 
-### Clone the llama repo and llama.cpp
-
+### Clone the llama.cpp
 repo_url="https://github.com/ggerganov/llama.cpp.git"  
 clone_dir="$REPOS_PATH/llama.cpp"
 

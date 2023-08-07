@@ -23,9 +23,14 @@ To begin using the FastAPI server for LLama 2, follow these steps:
 2. **Start the Server**: Launch the FastAPI server using the following command:
 
    ```
-   python3 -m llama_cpp.server --n_gpu_layers=64
+   python -m llama_cpp.server --n_gpu_layers=64
    ```
 
    (Additional server options and configurations can be found [here](https://github.com/abetlen/llama-cpp-python/blob/main/llama_cpp/server/app.py#L23).)
 
 3. **Explore the API Documentation**: Once the server is up and running, you can access the interactive API documentation by navigating to `http://localhost:8000/docs` in your web browser. This documentation provides detailed information on available endpoints and how to interact with them.
+
+
+## TBD
+
+- GPU with Docker: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html

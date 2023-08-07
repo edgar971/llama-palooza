@@ -6,4 +6,12 @@ uvicorn==0.23.1
 sse-starlette==1.6.1
 pydantic-settings==2.0.2
 torch==2.0.1
-setuptools
+setuptools==68.0.0
+accelerate==0.21.0
+transformers==4.31.0
+trl==0.5.0
+datasets==2.14.3
+bitsandbytes==0.41.1
+einops==0.6.1
+wandb==0.15.8
+scipy==1.11.1

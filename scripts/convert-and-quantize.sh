@@ -7,21 +7,21 @@ LLAMA_CPP_REPO="./repos/llama.cpp"
 TOKENIZER_PATH="./models/tokenizer.model"
 QUANTIZE_BIN="$LLAMA_CPP_REPO/quantize"
 
-GGML_DEFAULT_NAME="ggml-model-f32.bin"
+GGML_DEFAULT_NAME="ggml-model-f16.bin"
 
 if [ -z "$MODEL_PATH" ]; then
   echo "Usage: $0 <model_path>"
   exit 1
 fi
 
-echo "Converting model $MODEL_PATH to GGML FP32"
+echo "Converting model $MODEL_PATH to GGML FP16"
 
 eval "$(pyenv init -)"
 
 pyenv activate llm
 
 if [ ! -f "$MODEL_PATH/$GGML_DEFAULT_NAME" ]; then
-  python $LLAMA_CPP_REPO/convert.py $MODEL_PATH --vocab-dir $TOKENIZER_PATH
+  python $LLAMA_CPP_REPO/convert.py $MODEL_PATH --vocab-dir $TOKENIZER_PATH --outtype f16
 else 
   echo "GGML FP32 model already exists"
 fi
