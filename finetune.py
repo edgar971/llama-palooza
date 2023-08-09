@@ -75,7 +75,7 @@ def apply_prompt_template(samples, tokenizer):
 
 def get_preprocessed_codes(tokenizer, split):
     dataset = datasets.load_dataset("nampdn-ai/tiny-codes", split=split)
-    dataset = dataset.shuffle().select(range(250_000))
+    dataset = dataset.shuffle().select(range(50_000))
 
     def apply_prompt_template_batch(samples):
         return apply_prompt_template(samples, tokenizer)
@@ -103,7 +103,7 @@ training_args = TrainingArguments(
     logging_steps=50,
     save_strategy="no",
     optim="adamw_torch_fused",
-    max_steps=250_000,
+    max_steps=1000,
     report_to="none",
     learning_rate=1e-4,
     num_train_epochs=1,
