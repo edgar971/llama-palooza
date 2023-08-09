@@ -10,6 +10,11 @@ if ! command -v pyenv &> /dev/null; then
     exit 1
 fi
 
+if ! command -v docker &> /dev/null; then
+    echo "Docker is not installed. Please install Docker first."
+    exit 1
+fi
+
 mkdir -p $MODELS_PATH
 mkdir -p $REPOS_PATH
 
@@ -27,32 +32,6 @@ pip install -r requirements.txt
 
 # Install this version compatible with CUDA 11.2
 python -m pip install llama-cpp-python --prefer-binary --extra-index-url=https://jllllll.github.io/llama-cpp-python-cuBLAS-wheels/AVX2/cu122
-
-### Get download.sh script from the llama repo
-
-# file_url="https://raw.githubusercontent.com/facebookresearch/llama/main/download.sh"
-# download_dir="./scripts"
-# file_name="download-models.sh"
-
-# # Check if the file already exists
-# if [ -f "$download_dir/$file_name" ]; then
-#     echo "File already exists. No need to download."
-# else
-#     # Create the download directory if it doesn't exist
-#     mkdir -p "$download_dir"
-
-#     # Download the file using curl
-#     curl -o "$download_dir/$file_name" "$file_url"
-
-#     # Check if the download was successful
-#     if [ $? -eq 0 ]; then
-#         echo "File downloaded successfully."
-#     else
-#         echo "Failed to download the file."
-#         exit 1
-#     fi
-# fi
-
 
 ### Clone the llama.cpp
 repo_url="https://github.com/ggerganov/llama.cpp.git"  

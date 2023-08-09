@@ -1,5 +1,6 @@
 
 setup:
+	bash ./scripts/setup-gpu.sh
 	bash ./scripts/setup-env.sh
 
 build-llama-cpp:

@@ -2,6 +2,10 @@
 
 A collection of scripts and a FastAPI server designed for Llama 2, utilizing both llama.cpp and Python bindings.
 
+## Getting started
+
+1. Clone repo. 
+2. Run `make setup`. This will setup CUDA with Docker, create directories, and create a virtual python env. 
 
 ## Preparing Models
 
@@ -30,7 +34,6 @@ To begin using the FastAPI server for LLama 2, follow these steps:
 
 3. **Explore the API Documentation**: Once the server is up and running, you can access the interactive API documentation by navigating to `http://localhost:8000/docs` in your web browser. This documentation provides detailed information on available endpoints and how to interact with them.
 
+## Finetuning Models
 
-## TBD
-
-- GPU with Docker: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
+See `finetune.py` or `finetune.ipynb` for examples.
