@@ -37,3 +37,9 @@ To begin using the FastAPI server for LLama 2, follow these steps:
 ## Finetuning Models
 
 See `finetune.py` or `finetune.ipynb` for examples.
+
+
+## Other tools to explore
+
+1. https://github.com/huggingface/text-generation-inference
+2. https://github.com/huggingface/chat-ui/blob/main/Dockerfile

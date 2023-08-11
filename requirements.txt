@@ -16,4 +16,5 @@ einops==0.6.1
 wandb==0.15.8
 scipy==1.11.1
 peft==0.4.0
-trl
+nvidia-ml-py3==7.352.0
+optimum==1.11.0
